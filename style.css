@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+.main-login {
+    width: 100vw; /*vw significa a porcentagem da largura da viewport 100vw-> 1000px*/
+    height: 100vh;
+    background: #2b2031;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.left-login {
+    width: 50vw;
+    height: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.left-login > h1 {
+    color:#00ff88;
+    font-size: 3vw;
+}
+
+.left-login-image {
+    width: 25vw;
+    margin-bottom: 5px;
+}
+
+.right-login {
+    width: 50vw;
+    height: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card-login {
+    width: 60%; /*Pegando 60% da right login, (60% de 50vw)*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background-color: #32243d;
+    border-radius: 15px;
+    
+}
+
+.card-login > h1 {
+    color: #00ff88;
+    font-weight: 800;
+    margin: 0;
+}
+.textfield { 
+    width: 100%;
+    display: flex;
+    flex-direction: column; /*(Justify contente - eixo y) (align items - eixo y) flex-direction inverte isso*/
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.textfield > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #514869;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.textfield > label {
+    color: #f0ffffde;
+    margin-bottom: 10px;
+}
+
+.textfield > input::placeholder {
+    color: #f0ffff94;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #2b2031;
+    background: #00ff88;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+    opacity: 0.8;
+}
+
+.btn-login:hover{
+    opacity: 2;
+}
+
+@media only screen and (max-width: 950px) { /*Enquanto a tela tive 950px adcione os elementos abaixo*/
+    .card-login{
+        width: 85% ;
+    }
+}
+@media only screen and (max-width: 600px) { 
+    .main-login{
+        flex-direction: column;
+    }
+
+    .left-login > h1 {
+        display: none;
+    }
+
+    .left-login {
+        width: 100%;
+        height: auto;
+    }
+    
+    .right-login {
+        width: 100%;
+        height: auto;
+    }
+    
+    .left-login-image{
+        width: 30vh;
+    }
+
+    .card-login{
+        width: 90%;
+    }
+}
